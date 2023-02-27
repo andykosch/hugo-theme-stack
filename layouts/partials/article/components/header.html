@@ -1,4 +1,13 @@
 <header class="article-header">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2E4D6T4G2V"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2E4D6T4G2V');
+    </script>
     {{- $image := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" -}}
     {{ if $image.exists }}
         <div class="article-image">
@@ -21,11 +30,10 @@
                     <img src="{{ $Permalink }}"
                         {{ with $Srcset }}srcset="{{ . }}"{{ end }}
                         width="{{ $Width }}" 
-                        height="{{ $Height }}" 
-                        loading="lazy"
+                        height="{{ $Height }}"
                         alt="Featured image of post {{ .Title }}" />
                 {{ else }}
-                    <img src="{{ $image.permalink }}" loading="lazy" alt="Featured image of post {{ .Title }}" />
+                    <img src="{{ $image.permalink }}" alt="Featured image of post {{ .Title }}" />
                 {{ end }}
             </a>
         </div>

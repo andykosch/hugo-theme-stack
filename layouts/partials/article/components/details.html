@@ -36,15 +36,6 @@
                 </time>
             </div>
         {{ end }}
-
-        {{ if $showReadingTime }}
-            <div>
-                {{ partial "helper/icon" "clock" }}
-                <time class="article-time--reading">
-                    {{ T "article.readingTime" .ReadingTime }}
-                </time>
-            </div>
-        {{ end }}
     </footer>
     {{ end }}
 

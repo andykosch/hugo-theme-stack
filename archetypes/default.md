@@ -1,8 +1,8 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-description: 
+description: "***Description here***"
 date: {{ .Date }}
-image: 
+image: "FeaturedImage.svg"
 math: 
 license: 
 hidden: false
